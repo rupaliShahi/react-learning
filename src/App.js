@@ -24,10 +24,18 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log(expense);
+  }
+
+  const selectedYearHandler = (selectedYear) => {
+    console.log(selectedYear);
+  }
+
   return (
     <div>
-      <NewExpense />
-      <Expenses items = {expenses} />
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items = {expenses} onSelectedYear={selectedYearHandler} />
     </div>
   );
 }
